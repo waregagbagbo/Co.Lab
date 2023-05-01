@@ -1,23 +1,29 @@
 {% extends 'base.html'%} 
-
+{% load static %}
 {% block content%}
 <div class="container-fluid m-5 p-3">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <h2 class="text-capitalize fs-1 fw-light ">Hello! I'm Gab.&#128075</h2>
-                <p class="text-dark fs-4 fw-light">A multidisciplinary developer and designer (sometimes)<br/>
-                     with a passion for creating engaging, entertaining user experience.
+                <p class="text-dark fs-5 fw-light lh-3">A multidisciplinary developer and designer (sometimes)<br/>
+                     with a passion for creating engaging, entertaining user experience.<br/>
                      Currently working as a freelance designer.
             </div>
             <div class="col-sm-4">
-                <img src=""alt="">
- 
+                <img src="{% static  'img/man.png' %}" alt="man">
             </div>
         </div>
 
     </div> 
 </div>
+
+
+    {% include 'pages/about.html' %}
+    {% include 'pages/projects.html'%}
+    {% include 'paged/contact.html' %}
+
+
 {% endblock content%}
 
 
