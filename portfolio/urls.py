@@ -1,5 +1,5 @@
-from .import views
-from django.urls import path
+from .import views # imports the views function
+from django.urls import path # fetches the path from the settings
 
 
 # set the urls 
