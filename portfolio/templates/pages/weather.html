@@ -1,12 +1,12 @@
 {% extends 'base.html'%}
 {% block content %}
-<div id="jumbotron" class="jumbotron" style="text-align: center; margin-top:-50px">  
-    <h1 class="display-4">Weather Desktop App </h1>  
-    <h5>Using Python Language and Django Framework</h5>  
-  </div>  
+<div id="jumbotron" class="jumbotron" style="text-align: center; margin-top:-5px">  
+    <h1 class="display-4">Weather  Update </h1>  
+    <h5>Learn Weather of any City before Travelling</h5>
+  </div>
   
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
-      <form method="post" class="col-md"">  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-lg-4">  
+      <form method="post" class="col-md">  
           {% csrf_token %}  
             <div class=" input-group">   
               <input type="text" class="form-control" name="city" placeholder="Choose Your City">  
@@ -15,7 +15,7 @@
             </div>    
         </form>
     </nav>  
-     <br> <br>  
+    <br> 
   <div class="row"> 
     {% if country_code and coordinate and temp and pressure and humidity %}  
         <div class="col d-flex justify-content-center" ">  

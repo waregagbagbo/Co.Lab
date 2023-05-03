@@ -19,7 +19,7 @@ def contact(request):
     return render(request,'pages/contact.html')
 
 
-def podcasts(request): 
+def weather(request): 
     if request.method == 'POST':
         # get the city name fro the api
         city = request.POST.get('London','True')
@@ -44,7 +44,7 @@ def podcasts(request):
         context ={}
         
     # push context dta to the template
-    return render(request,'pages/podcasts.html', context)
+    return render(request,'pages/weather.html', context)
         
 
 
