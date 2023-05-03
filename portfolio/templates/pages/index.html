@@ -11,19 +11,19 @@
                      Currently working as a freelance designer.
             </div>
             <div class="col-sm-4">
-                <img src="{% static  'img/man.png' %}" alt="man">
+                <img src="{% static 'admin/images/lase.jpg' %}" class="img-thumbnail rounded-float-end" alt="person">
             </div>
         </div>
 
     </div> 
 </div>
-
-    {% include 'pages/about.html' %}
     
-    {% include 'pages/projects.html'%}
 
-    {% include 'pages/contact.html' %}
+    <div class="flex">{% include 'pages/about.html' %}</div>
     
+    <div class="container">{% include 'pages/projects.html'%}</div>
+
+    <div class="container ">{% include 'pages/contact.html'%}</div>
 
 
 {% endblock content%}
