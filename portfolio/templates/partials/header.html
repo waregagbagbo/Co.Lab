@@ -1,16 +1,16 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
     <!-- Brand and logo -->
     <a class="navbar-brand" href="{% url 'index' %}">
-      <img src="" alt="gab" width="30" height="24">
+      <img src="{% static 'images/logo.png'%}" alt="gab" width="100%%" height="50px">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navigation links  the collapse for mobile hamburger and flex concept to center menu-->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav  ms-4">
+      <ul class="navbar-nav ms-4 fs-5">
         <li class="nav-item active">
           <a class="nav-link" href="#">About</a>
         </li>
