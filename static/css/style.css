@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+   height: auto !important;
+   height: 100%;
+   margin: 0 auto -60px;
+ 
+}
+/*about image*/
+#about-image{
+    height:80px;
+}
+
+
