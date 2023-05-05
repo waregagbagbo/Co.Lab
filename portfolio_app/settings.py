@@ -116,11 +116,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'  # path to local dev image storage
-STATIC_ROOT = os.path.join(BASE_DIR,'static') # development image directory
+STATIC_URL = 'static/'  # path to local dev image storage
+STATICFILES_DIRS = [BASE_DIR/'static'] # development image directory
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
