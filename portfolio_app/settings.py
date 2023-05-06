@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,4 @@ STATICFILES_DIRS = [BASE_DIR/'static'] # development image directory
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOAD_TEMPLATE = 'bootstrap4' # add the crispy forms template
