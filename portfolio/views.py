@@ -2,6 +2,7 @@ import json
 from django.shortcuts import render, HttpResponse
 import urllib.request
 from .forms import ContactForm
+from .models import *
 # create the views
 
 def index(request): # home view
@@ -17,7 +18,7 @@ def projects(request): # projects view
 
 
 def contact(request):
-    # get a post request
+    # get / initializesource  a post request from the user
     if request.method == 'POST':
         # create an instance of the class/object
         form = ContactForm(request.POST)
@@ -28,11 +29,11 @@ def contact(request):
             return HttpResponse('Thank you')
         else:
             form = ContactForm() # returns a GET request
-        #context ={
-           # 'form': form,
-        #}
+        context ={
+            'form': form,
+        }
         
-    return render(request,'pages/contact.html',{'form':form})
+    return render(request,'pages/contact.html',context)
 
 
 def weather(request): 

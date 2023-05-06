@@ -10,7 +10,7 @@ class Contact(models.Model):
     message = models.TextField(blank=False, null=True, max_length=100)
     
     class Meta:
-        verbose_name = 'Contact'
+        verbose_name_plural = 'contact'
         
     def __init__(self):
         return self.name, self.email

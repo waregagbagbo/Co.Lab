@@ -1,4 +1,4 @@
-{% load crispy_forms-tags %}
+{% load crispy_forms_tags %}
 <section>
   <div class="container-fluid" style="margin-left:-20px;margin-top:80px;">
     <div class="row">
@@ -13,8 +13,7 @@
         <p class="float-lg-start"><i class="fa fa-github" aria-hidden="true"></i></p>        
       </div>
       <div class="col">
-        {{forms | crispy }}
-        
+        {{form|crispy}}    
 
       </div>
     </div>    

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -126,4 +127,5 @@ STATICFILES_DIRS = [BASE_DIR/'static'] # development image directory
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOAD_TEMPLATE = 'bootstrap4' # add the crispy forms template
+CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

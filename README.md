@@ -37,5 +37,6 @@ python -m pip install --upgrade pip
  add the static path to the urlpatterns as:
  urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # for development only
  or if settings.DEBUG:urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
- bothr works and you can choose any.
 
+
+Install Django Crispy forms to use in the Contact FORM
