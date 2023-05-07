@@ -1,5 +1,6 @@
 import json
 from django.shortcuts import render, HttpResponse
+from django.http import HttpResponseRedirect
 import urllib.request
 from .forms import ContactForm
 from .models import *
@@ -21,16 +22,16 @@ def contact(request):
     # get / initializesource  a post request from the user
     if request.method == 'POST':
         # create an instance of the class/object
-        form = ContactForm(request.POST)
+        fom = ContactForm(request.POST)
         # check validity of the object form
-        if form.is_valid():
+        if fom.is_valid():
             # do something
-            form.save()
+            fom.save()
             return HttpResponse('Thank you')
         else:
-            form = ContactForm() # returns a GET request
+            fom = ContactForm() # returns a GET request
         context ={
-            'form': form,
+            'fom':fom,
         }
         
     return render(request,'pages/contact.html',context)

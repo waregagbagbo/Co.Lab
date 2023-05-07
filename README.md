@@ -39,4 +39,4 @@ python -m pip install --upgrade pip
  or if settings.DEBUG:urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
 
-Install Django Crispy forms to use in the Contact FORM
+Install Django Crispy forms to use in the Contact form

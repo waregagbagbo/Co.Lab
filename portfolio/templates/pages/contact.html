@@ -13,12 +13,18 @@
         <p class="float-lg-start"><i class="fa fa-github" aria-hidden="true"></i></p>        
       </div>
       <div class="col">
-        {{form|crispy}}    
+        <div class="mb-3">
+          <form action='#' method="POST">
+            {% csrf_token %} 
+            {{form|crispy}}
+              
+            <input type="submit" name="submit" value="Save" class="btn btn-primary" id="submit-save">                  
+          </form>          
+        </div>     
 
       </div>
     </div>    
   </div>
-
 
 </section>
 

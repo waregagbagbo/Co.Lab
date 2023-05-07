@@ -12,5 +12,6 @@ class Contact(models.Model):
     class Meta:
         verbose_name_plural = 'contact'
         
-    def __init__(self):
-        return self.name, self.email
+    def __str__(self):
+        #return self.name
+        return '%s %s' % (self.name, self.email)
