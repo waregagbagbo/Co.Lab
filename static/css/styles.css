@@ -3,6 +3,8 @@
     padding:0;
 }
 body{
+    overflow:hidden;
+    overflow-y:scroll;
    height: auto !important;
    height: 100%;
    margin: 0 auto -60px;
@@ -11,6 +13,9 @@ body{
 /*about image*/
 footer{
     margin-top:0px;
-    background-color:red;
+    background-color: red!important;
+}
+#contact{
+    background-color:#f2f2f2 !important;
 }
 

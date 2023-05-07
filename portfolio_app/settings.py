@@ -118,8 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'  # path to local dev image storage
-STATICFILES_DIRS = [BASE_DIR/'static'] # development image directory
+
+STATIC_URL = '/static/'  # path to local dev static  storage
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # development image directory
+
+
 
 
 # Default primary key field type
