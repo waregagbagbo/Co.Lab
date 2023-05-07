@@ -2,12 +2,22 @@ import json
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseRedirect
 import urllib.request
-from .forms import ContactForm
-from .models import *
+from .forms import ContactMeForm
+from .models import  Contact
 # create the views
 
-def index(request): # home view
-    return render(request,'pages/index.html')
+def index(request):
+    if request.method == 'POST':
+        # create an instance of the class/object
+        form = ContactMeForm(request.POST)
+        # check validity of the object form
+        if form.is_valid():
+            # do something
+            form.save()
+            return HttpResponseRedirect('Thank you')
+    else:
+        form = ContactMeForm() # returns a GET request
+    return render(request,'pages/index.html',{'form':form})
 
 
 def about(request):  # about view
@@ -20,21 +30,17 @@ def projects(request): # projects view
 
 def contact(request):
     # get / initializesource  a post request from the user
-    if request.method == 'POST':
+    '''if request.method == 'POST':
         # create an instance of the class/object
-        fom = ContactForm(request.POST)
+        form = ContactMeForm(request.POST)
         # check validity of the object form
-        if fom.is_valid():
+        if form.is_valid():
             # do something
-            fom.save()
-            return HttpResponse('Thank you')
-        else:
-            fom = ContactForm() # returns a GET request
-        context ={
-            'fom':fom,
-        }
-        
-    return render(request,'pages/contact.html',context)
+            form.save()
+            return HttpResponseRedirect('Thank you')
+    else:
+        form = ContactMeForm() # returns a GET request
+    return render(request,'pages/contact.html', {'form':form})'''
 
 
 def weather(request): 

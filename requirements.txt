@@ -3,7 +3,6 @@ certifi==2022.12.7
 charset-normalizer==3.1.0
 crispy-bootstrap5==0.7
 Django==4.2
-django-crispy-forms==2.0
 idna==3.4
 newsapi-python==0.2.7
 requests==2.29.0

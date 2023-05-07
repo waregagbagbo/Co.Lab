@@ -127,5 +127,6 @@ STATICFILES_DIRS = [BASE_DIR/'static'] # development image directory
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
+

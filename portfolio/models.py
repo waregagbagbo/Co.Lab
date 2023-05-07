@@ -1,7 +1,4 @@
 from django.db import models
-
-# Create your models here.
-
 # create contact form model
 
 class Contact(models.Model):
