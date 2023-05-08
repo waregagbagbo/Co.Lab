@@ -1,9 +1,10 @@
 import json
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse,redirect
 from django.http import HttpResponseRedirect
 import urllib.request
 from .forms import ContactMeForm
 from .models import  Contact
+from django.contrib import messages # for messaging
 # create the views
 
 def index(request):
@@ -14,7 +15,8 @@ def index(request):
         if form.is_valid():
             # do something
             form.save()
-            return HttpResponseRedirect('Thank you')
+            messages.success(request, 'Your object has been saved.')        
+            return redirect('/')
     else:
         form = ContactMeForm() # returns a GET request
     return render(request,'pages/index.html',{'form':form})

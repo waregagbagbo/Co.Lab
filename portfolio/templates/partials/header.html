@@ -10,20 +10,21 @@
     </button>
     <!-- Navigation links  the collapse for mobile hamburger and flex concept to center menu-->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav ml-auto fs-5">
+      <ul class="navbar-nav ml-auto fs-6 p-4 ">
         <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="{% url 'index' %}#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="{% url 'index' %}#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Me</a>
+          <a class="nav-link" href="{% url 'index' %}#contact">Contact Me</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'weather' %}">Get Updates</a>
         </li>
       </ul>
+      <button class="btn btn-primary">Download Cv</button>
     </div>
   </div>
 </nav>

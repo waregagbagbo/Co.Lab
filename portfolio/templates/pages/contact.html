@@ -1,28 +1,29 @@
 {% load crispy_forms_tags %}
 {% block content %}
-<section id='contact'>
-  <div class="container-fluid" style="margin-left:-20px;margin-top:80px;">
+<section class='m-5 p-4'>
+  <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-6" id="cont">
         <h2 class="text-capitalize fs-1 fw-light ">Lets Connect!&#128231</h2>
         <p class="text-dark fs-5 fw-light lh-3">
           If you ever want to grab a coffee/bubble tea (virtually)or just want a quick chat -<br/>you
            can find me on social media or you can send me a message here!                
         </p>
-        <div id='socials'>
-          <p class="float-lg-start" style><i class="fa fa-twitter" aria-hidden="true"></i></p>
-          <p class="float-lg-start"><i class="fa fa-linkedin" aria-hidden="true"></i></p> 
-          <p class="float-lg-start"><i class="fa fa-github" aria-hidden="true"></i></p>
+        <div class="d-flex" id='socials'>
+          <p class="float-lg-start p-3"><i class="fa fa-twitter" aria-hidden="true"></i></p>
+          <p class="float-lg-start p-3"><i class="fa fa-linkedin" aria-hidden="true"></i></p> 
+          <p class="float-lg-start p-3"><i class="fa fa-github" aria-hidden="true"></i></p>
+          <p class="float-lg-start p-3"><i class="fa fa-stack-overflow" aria-hidden="true"></i></p>
 
         </div>
              
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <div class="mb-3">
           <form action='#' method="POST">
             {% csrf_token %} 
             {{form | crispy }}             
-            <input type="submit" name="submit" value="Save" class="btn btn-primary" id="submit-save">                  
+            <input type="submit" name="submit" value="Submit" class="btn btn-primary" id="submit-save">                  
           </form>          
         </div>     
 

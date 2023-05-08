@@ -2,20 +2,43 @@
     margin:0;
     padding:0;
 }
+
 body{
     overflow:hidden;
     overflow-y:scroll;
-   height: auto !important;
-   height: 100%;
-   margin: 0 auto -60px;
- 
 }
-/*about image*/
+/*hero section*/
+.hero{
+  margin-top:-010px;
+
+}
+/*contact section*/
+#cont{
+  margin-right:-40px;
+}
 footer{
     margin-top:0px;
     background-color: red!important;
 }
-#contact{
-    background-color:#f2f2f2 !important;
+#socials{
+    font-size: 1.5rem;
 }
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    90% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #toolkit {
+    animation: pulse 8s ease-in-out infinite;
+    animation: 3s ease-in 1s infinite reverse both running slidein;
+    
+  }
+  
 
