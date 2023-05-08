@@ -1,7 +1,17 @@
 *{
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
+:root {
+  --primary-color:#5b65ea; /* blue */
+  --background-color: #fff; /* white */
+  --secondary-color:#ff6dcd;
+  --themeic-color: #e89733;
+  --text-color: #333; /* black */
+  --background-color-dark: #333; /* dark background */
+  --text-color-dark: #fff; /* light text */
+}
+
 
 body{
     overflow:hidden;
@@ -9,53 +19,69 @@ body{
 }
 /*hero section*/
 .hero{
-  margin-top:-010px;
+  margin-top:-10px;
 
 }
-/*contact section*/
+/*end of hero*/
+
+/* about section/*
+
+/*end about sectio*/
+
+
+
+/* start contact section*/
 #cont{
   margin-right:-40px;
 }
 #socials{
     font-size: 1.5rem;
-}
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    90% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  #toolkit {
-    margin-left:-10px;
-    display:flex;
-    justify-content:flex-start;
-    animation: pulse 8s ease-in-out infinite;
-    animation: 3s ease-in 1s infinite reverse both running slidein;
-    
-  }
+} 
+
+  /*span for titles*/
 #deco{
-  color:rgb(232, 149, 48);
+  box-shadow:0 0 20px rgba(255, 161, 42, 1);
+  /*box-shadow: 20px -26px #ffa02a;
+  box-shadow: 2px 2px 2px 1px rgba(91, 101, 234, 1);*/
 
 }
+/*footer section*/
 .footer {
-  padding: 20px;
+  padding-top:10px;
+  margin-top:20px;
   text-align:center;
   left:0;
-  bottom:0;
   width:100%;
   height:50px;
-  margin-top:0px;
   background-color:#5a60ea!important;
-  
 }
-#footer-text{
-  top:2px;
-}
-  
 
+/*end of footer*/
+
+/*buttons */
+#buttons{
+  background-color:#d36bcb;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+
+}
+/*end of buttons*/
+
+/*toolkit icons*/
+#toolkit{
+  margin-left:-10px;
+  display:flex;
+  justify-content:flex-start; 
+  transition: color 0.2s ease;  
+}
+#toolkits:hover{
+  color:#d36bcb;
+}
+  /*end of toolkit*/
+
+#socials :hover{
+  color:#d36bcb;
+  cursor: auto;;
+
+}

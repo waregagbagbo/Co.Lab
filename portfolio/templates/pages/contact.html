@@ -3,8 +3,8 @@
 <section class='m-5 p-4'>
   <div class="container">
     <div class="row">
-      <div class="col-md-6" id="cont">
-        <h2 class="text-capitalize fs-1 fw-light ">Lets Connect!&#128231</h2>
+      <div class="col-md-6">
+        <h2 class="text-capitalize fs-1 fw-light "><span id="deco">Lets Connect!&#12823</span></h2>
         <p class="text-dark fs-5 fw-light lh-3">
           If you ever want to grab a coffee/bubble tea (virtually)or just want a quick chat -<br/>you
            can find me on social media or you can send me a message here!                
@@ -23,7 +23,7 @@
           <form action='#' method="POST">
             {% csrf_token %} 
             {{form | crispy }}             
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary" id="submit-save">                  
+            <input type="submit" name="submit"  class="btn ms-lg-1"value="Submit" id="buttons">                  
           </form>          
         </div>     
 
