@@ -133,3 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
 
+
+LISTEN_API_KEY = 'ff90dc099f7b47c59d3a99921e17d90c'
+ 

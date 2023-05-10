@@ -1,6 +1,7 @@
 *{
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 :root {
   --primary-color:#5b65ea; /* blue */
@@ -11,11 +12,18 @@
   --background-color-dark: #333; /* dark background */
   --text-color-dark: #fff; /* light text */
 }
+ul{
+  list-style:none;
+}
 
 
 body{
     overflow:hidden;
     overflow-y:scroll;
+}
+.dark-mode{
+  background-color: black;
+  color: white;       
 }
 /*hero section*/
 .hero{
@@ -85,3 +93,80 @@ body{
   cursor: auto;;
 
 }
+#project{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  margin:50px 0px;
+}
+.project-heading{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+}
+.project-heading h3{
+  font-size:default;
+  font-weight:600;
+  text-transform:uppercase;
+}
+.project-filter{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:20px;
+  border:1px solid rgba(237,237,237,0.6);
+  flex-wrap:wrap;
+}
+.project-filter li{
+  margin: 10px;
+  padding: 5px 20px;
+  color: var(--themeic-color);
+  font-size: 1rem;
+  letter-spacing:0.5px;
+  font-weight: 400;
+  cursor:pointer;
+  user-select:none;
+
+}
+
+.project-filter-active{
+  background-color:var(--primary-color);
+  color:#e89733;
+
+}
+.project-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-left:50px;
+
+}
+.project-box{
+  width:330px;
+  padding: 15px;
+  border: 1px solid #f2f2f2;
+  margin:20px;
+
+}
+/*.project-box img{
+  width:100%;
+  overflow: hidden;
+  border-radius: 5px;
+
+}*/
+@media(max-width:740px){
+  .project-filter{
+    background-color:#fff;
+    border: 1px solid rgba(237,237,237,0.6);
+  }
+  .project-filter-active{
+    background-color:#fff;
+    border: 1px solid rgba(237,237,237,0.6);
+  }
+  .project-box{
+    width:80%;
+  }
+}
+

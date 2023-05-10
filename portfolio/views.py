@@ -6,6 +6,10 @@ from .forms import ContactMeForm
 from .models import  Contact
 from django.contrib import messages # for messaging
 # create the views
+from listennotes import podcast_api # import the listennotes
+
+
+
 
 def index(request):
     if request.method == 'POST':
@@ -71,6 +75,17 @@ def weather(request):
         
     # push context dta to the template
     return render(request,'pages/weather.html', context)
+
+
+def podcast(request):  
+    client = podcast_api.Client(api_key='api_key')
+    response = client.fetch_curated_podcasts_lists(
+        page=2,
+    )
+    print(json.dumps(response.json()))
+    return render(request, 'pages/podcast.html',{'reponse':response})
+    
         
+  
 
-
+    

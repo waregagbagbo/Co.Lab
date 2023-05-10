@@ -1,11 +1,8 @@
-{% extends 'base.html'%}
-{% block content %}
-<div id="jumbotron" class="jumbotron" style="text-align: center; margin-top:-5px">  
-    <h1 class="display-4">Weather  Update </h1>  
-    <h5>Learn Weather of any City before Travelling</h5>
-  </div>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-lg-4">  
+
+{% for i in response %}
+    {{i}}
+{% endfor%}
+ <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-lg-4">  
       <form method="post" class="col-md">  
           {% csrf_token %}  
             <div class=" input-group">   
@@ -17,8 +14,9 @@
     </nav>  
     <br> 
   <div class="row"> 
-    {% if country_code and coordinate and temp and pressure and humidity %}  
-        <div class="col d-flex justify-content-center" ">  
+    {% if country_code and coordinate and temp and pressure and humidity %} 
+    {{result}} 
+        <div class="col d-flex justify-content-center ">  
              <div class=" card text-white bg-light mb-6">  
                 <div class=" card-body">  
                      <h4><span class="badge badge-primary">City :</span> {{city}}</h4>  
@@ -30,9 +28,8 @@
                 </div>
         </div>  
     {% endif %}  
-</div> 
+</div> -->
 
-{% endblock content %}
 
 
 
