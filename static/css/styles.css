@@ -22,8 +22,8 @@ body{
     overflow-y:scroll;
 }
 .dark-mode{
-  background-color: black;
-  color: white;       
+  background-color:#5b65ea;
+  color:#fff;   
 }
 /*hero section*/
 .hero{
