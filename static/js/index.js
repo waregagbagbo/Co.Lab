@@ -2,7 +2,7 @@ $(document).on('click','.project-filter li',function(){
     $(this).addClass('[project-filter-active').siblings().removeClass('project-filter-active')
 });
 
-/* projects */
+/* projects filter section*/
 $(document).ready(function(){
     $('.list').click(function(){
         const value = $(this).attr('data-filter');
@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
 });
 
-/* dark mode*/
+/* Theme switcher dark mode*/
 function darkMode(){
     const element = document.body;
     element.classList.toggle('dark-mode')

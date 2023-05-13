@@ -5,9 +5,10 @@ import urllib.request
 from .forms import ContactMeForm
 from .models import  Contact
 from django.contrib import messages # for messaging
+#from newsapi import NewsApiClient as news
+from newsapi.newsapi_client import NewsApiClient as news
+import requests
 # create the views
-from listennotes import podcast_api # import the listennotes
-
 
 
 
@@ -77,15 +78,13 @@ def weather(request):
     return render(request,'pages/weather.html', context)
 
 
-def podcast(request):  
-    client = podcast_api.Client(api_key='api_key')
-    response = client.fetch_curated_podcasts_lists(
-        page=2,
-    )
-    print(json.dumps(response.json()))
-    return render(request, 'pages/podcast.html',{'reponse':response})
-    
-        
-  
+def podcast(request):
+    url = ('https://newsapi.org/v2/everything?'
+       'q=Football&'
+       'from=2023-04-13&'
+       'sortBy=popularity&'
+       'apiKey=6963fb9b88aa4ed3a8734ead9a2e32df')
 
-    
+    response = requests.get(url).json()    
+    return render(request,'pages/podcast.html',{"response":response})
+     

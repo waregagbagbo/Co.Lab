@@ -18,12 +18,12 @@ ul{
 
 
 body{
-    overflow:hidden;
+    overflow-x:hidden;
     overflow-y:scroll;
 }
 .dark-mode{
-  background-color:#5b65ea;
-  color:#fff;   
+  background-color:#f2f2f2;
+  color: #5b5b5b;  
 }
 /*hero section*/
 .hero{
