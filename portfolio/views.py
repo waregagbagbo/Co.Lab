@@ -78,7 +78,24 @@ def weather(request):
 
 
 def podcast(request):
-    url = "https://v2.jokeapi.dev/joke/Programming,Dark,Spooky,Christmas?blacklistFlags=explicit"    
-    response = requests.get(url).json()  
-    return render(request,'pages/podcast.html',{"response":response})
+    url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=single"
+    querystring = {
+                   "format":"json",
+                   #"contains":"C%23",
+                   "idRange":"0-150",
+                   "amount": 6,
+                   "blacklistFlags":"nsfw,racist"}
+    
+    
+
+    #"X-RapidAPI-Key": "8ad0683ba1msh4c14b47abe52a3bp1608f0jsn7fcfea9b9564",
+	#"X-RapidAPI-Host": "jokeapi-v2.p.rapidapi.com"
+    #}
+    response = requests.get(url, params=querystring)
+    data = response.json()
+    context = {
+        "data":data,
+    }
+    
+    return render(request,'pages/podcast.html',context)
      
