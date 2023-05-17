@@ -30,7 +30,22 @@ body{
   margin-top:-10px;
 
 }
-/*end of hero*/
+/*end of hero*
+/* The animation code */
+@keyframes example {
+  0%   {right:0px; top:0px;}
+  25%  {right:200px; top:0px;}
+  50%  {right:200px; top:200px;}
+  75%  {right:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+#hero-image{
+  position:relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -2s;
+
+}
 
 /* about section/*
 
@@ -169,4 +184,51 @@ body{
     width:80%;
   }
 }
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #d36bcb;
+}
+
+.facebook {
+  background: #000;
+  color: white;
+}
+
+.twitter {
+  background: #5a60ea;
+  color: white;
+}
+
+.google {
+  background: #000;
+  color: white;
+}
+
+.linkedin {
+  background: #5b65ea;
+  color: white;
+}
+
+.youtube {
+  background:var(--themeic-color);
+  color: white;
+}

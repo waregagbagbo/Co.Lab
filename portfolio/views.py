@@ -7,10 +7,13 @@ from .models import  Contact
 from django.contrib import messages # for messaging
 import requests
 from jokeapi import Jokes
+import asyncio
+
+
+
+
+
 # create the views
-
-
-
 def index(request):
     if request.method == 'POST':
         # create an instance of the class/object
@@ -49,40 +52,17 @@ def contact(request):
     return render(request,'pages/contact.html', {'form':form})'''
 
 
-def weather(request): 
-    if request.method == 'POST':
-        # get the city name fro the api
-        city = request.POST.get('London','True')
-        
-        # fetch informationusing the API
-        source = urllib.request.urlopen("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3b8dc39f762c805cedd65b91051b5190").read()
-  
-        # convert json data file into python dict
-        list_of_data = json.loads(source)
-        
-        # create dict and convert to string
-        context ={
-            'city': city,
-            'country_code':str(list_of_data['sys']['country']),
-            'coordinate': str(list_of_data['coord']['lon'])+ ''+ str(list_of_data['coord']['lat']),
-            'temp': str(list_of_data['main']['temp']) + 'k',
-            'pressure': str(list_of_data['main']['pressure']),
-            'humidity': str(list_of_data['main']['humidity']),            
-            
-        }
+async def jokes(request):
+    j = await Jokes()  # Initialise the class
+    jok = await j.get_joke(category=['programming', 'christmas','dark'])  # Will return a joke that fits in either the programming or dark category.
+    if jok["type"] == "single": # Print the joke
+       print(jok["jok"])
     else:
-        context ={}
-        
-    # push context dta to the template
-    return render(request,'pages/weather.html', context)
-
-
-def jokes(request):
-    url = "https://v2.jokeapi.dev/joke/Any"
-    response = requests.get(url)
-    context = {
+        print(jok["setup"])
+        print(jok["delivery"])    
+    response = asyncio.run(jokes())        
+    context ={
         "response":response,
-    }
-    
+    }    
     return render(request,'pages/jokes.html',context)
      
