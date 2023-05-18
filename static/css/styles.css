@@ -26,32 +26,28 @@ body{
   color: #5b5b5b;  
 }
 /*hero section*/
+.dark-mode,navbar{
+  background-color:#f2f2f2;
+  color:#5b5b5b;
+}
 .hero{
   margin-top:-10px;
 
 }
 /*end of hero*
 /* The animation code */
-@keyframes example {
-  0%   {right:0px; top:0px;}
+@keyframes hero {
+  0%   {background-color:#e89733;right:0px; top:0px;}
   25%  {right:200px; top:0px;}
-  50%  {right:200px; top:200px;}
-  75%  {right:0px; top:200px;}
-  100% {left:0px; top:0px;}
+  50%  {background-color:#f2f2f2;right:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {background-color:#f2f2f2;right:0px; top:0px;}
 }
 #hero-image{
   position:relative;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-delay: -2s;
-
+  animation-name:hero;
+  animation-duration:6s;
 }
-
-/* about section/*
-
-/*end about sectio*/
-
-
 
 /* start contact section*/
 #cont{
@@ -87,6 +83,19 @@ body{
   color:#fff;
   border-radius:30px;
   text-decoration:none;
+
+}
+#buttons:hover{
+  background-color:#e89733;
+}
+.CTA{
+  display:flexbox;
+  flex-flow:column;
+  flex-wrap:nowrap;
+  margin-top:40px;
+  -ms-flex-align:start;
+  justify-content:space-around;
+
 
 }
 /*end of buttons*/
@@ -187,10 +196,12 @@ body{
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
   position: fixed;
-  top: 50%;
+  top: 25%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  transform:scale(2);
+  animation:pulse 3s infinite;
 }
 
 /* Style the icon bar links */
@@ -231,4 +242,20 @@ body{
 .youtube {
   background:var(--themeic-color);
   color: white;
+}
+
+@keyframes pulse{
+  0% {
+    transform:scale(0.95);
+  }
+  50%{
+    transform:scale(1);
+    background-color:#ff6dcd;
+
+  }
+  100%{
+    transform:scale(0.95);
+  }
+  
+
 }
