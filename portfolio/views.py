@@ -3,14 +3,11 @@ from django.shortcuts import render, HttpResponse,redirect
 from django.http import HttpResponseRedirect
 import urllib.request
 from .forms import ContactMeForm
-from .models import  Contact
+from .models import Contact, Project
 from django.contrib import messages # for messaging
 import requests
 from jokeapi import Jokes
 import asyncio
-
-
-
 
 
 # create the views
@@ -29,12 +26,10 @@ def index(request):
     return render(request,'pages/index.html',{'form':form})
 
 
-def about(request):  # about view
-    return render(request,'pages/about.html')
-
-
-def projects(request): # projects view
-    return render(request,'pages/about.html')
+def tools(request): # projects view
+    Projects = Project.objects.all()
+    
+    return render(request,'pages/index.html')
 
 
 def contact(request):
