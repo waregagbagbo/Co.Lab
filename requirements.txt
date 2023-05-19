@@ -13,6 +13,7 @@ idna==3.4
 jokeapi==1.0.5
 multidict==6.0.4
 newsapi-python==0.2.7
+Pillow==9.5.0
 podcast-api==1.1.5
 requests==2.29.0
 simplejson==3.19.1
