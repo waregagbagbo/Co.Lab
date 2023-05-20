@@ -1,3 +1,19 @@
-{% for d in reponse %}
-    {{d}}
-{% endfor %}
+{% extends 'base.html'%}
+
+{% block content %}  
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            {% for jokes in final %}
+               {{jokes.setup}}
+               {{jokes.punchline}}
+ 
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock content%}
+
+

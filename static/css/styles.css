@@ -16,7 +16,6 @@ ul{
   list-style:none;
 }
 
-
 body{
     overflow-x:hidden;
     overflow-y:scroll;
@@ -32,16 +31,17 @@ body{
 }
 .hero{
   margin-top:-10px;
+  border-radius: 100;
 
 }
 /*end of hero*
 /* The animation code */
 @keyframes hero {
-  0%   {background-color:#e89733;right:0px; top:0px;}
+  0%   {background-color:#f2f2f2;right:0px; top:0px;border-radius:500px;}
   25%  {right:200px; top:0px;}
-  50%  {background-color:#f2f2f2;right:200px; top:200px;}
+  50%  {background-color:#f2f2f2;right:200px; top:200px;border-radius:500px;}
   75%  {left:0px; top:200px;}
-  100% {background-color:#f2f2f2;right:0px; top:0px;}
+  100% {background-color:#f2f2f2;right:0px; top:0px;border-radius:500px;}
 }
 #hero-image{
   position:relative;
@@ -202,6 +202,8 @@ body{
   transform: translateY(-50%);
   transform:scale(2);
   animation:pulse 3s infinite;
+  font-size:30px;
+
 }
 
 /* Style the icon bar links */
@@ -251,6 +253,7 @@ body{
   50%{
     transform:scale(1);
     background-color:#ff6dcd;
+    border-radius:100px;
 
   }
   100%{
