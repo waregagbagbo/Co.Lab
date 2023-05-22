@@ -134,6 +134,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-
- 
+EMAIL_HOST = 'smtp.google.com'
+EMAIL_HOST_USER = "denzrich10@gmail.com"
+EMAIL_HOST_PASSWORD = 'iexmfmmykxmcdhcz'
+EMAIL_PORT =587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Gabel<noreply@gabe>"
