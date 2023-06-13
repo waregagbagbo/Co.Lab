@@ -35,13 +35,13 @@ def index(request):
 
 
 def jokes(request):
-    url ="https://dad-jokes.p.rapidapi.com/random/joke"
+    url ="https://dad-jokes.p.rapidapi.com/joke/type/random"
     headers = {
 	"X-RapidAPI-Key": "8ad0683ba1msh4c14b47abe52a3bp1608f0jsn7fcfea9b9564",
 	"X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
  }
-    response = requests.get(url, headers=headers).text
-    #final_response = print(response.json())           
+    response = requests.get(url, headers=headers)
+    final_response =(response.text)          
     context ={
         "final_response":response,
     }    
