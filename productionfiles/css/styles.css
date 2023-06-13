@@ -1,0 +1,196 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+:root {
+  --primary-color:#5b65ea; /* blue */
+  --background-color: #fff; /* white */
+  --secondary-color:#ff6dcd;
+  --themeic-color: #e89733;
+  --text-color: #333; /* black */
+  --background-color-dark: #333; /* dark background */
+  --text-color-dark: #fff; /* light text */
+}
+ul{
+  list-style:none;
+}
+
+body{
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.dark-mode{
+  background-color:#f2f2f2;
+  color: #5b5b5b;  
+}
+/*hero section*/
+.dark-mode,navbar{
+  background-color:#f2f2f2;
+  color:#5b5b5b;
+}
+.hero{
+  margin-top:-10px;
+  border-radius: 100;
+
+}
+/*end of hero*
+/* The animation code */
+@keyframes hero {
+  0%   {background-color:#fff;right:0px; top:0px;border-radius:500px;}
+  25%  {right:200px; top:0px;}
+  50%  {background-color:#fff;right:200px; top:200px;border-radius:500px;}
+  75%  {left:0px; top:200px;}
+  100% {background-color:#ffff;right:0px; top:0px;border-radius:500px;}
+}
+#hero-image{
+  position:relative;
+  animation-name:hero;
+  animation-duration:6s;
+}
+
+/* start contact section*/
+#cont{
+  margin-right:-40px;
+}
+#socials{
+    font-size: 1.5rem;
+} 
+
+  /*span for titles*/
+#deco{
+  box-shadow:0 0 20px rgba(255, 161, 42, 1);
+  /*box-shadow: 20px -26px #ffa02a;
+  box-shadow: 2px 2px 2px 1px rgba(91, 101, 234, 1);*/
+
+}
+/*footer section*/
+.footer {
+  padding-top:10px;
+  margin-top:100px;
+  text-align:center;
+  width:100%;
+  height:50px;
+  background-color:#5a60ea!important;
+  position:relative;
+  bottom:0;
+}
+
+/*end of footer*/
+
+/*buttons */
+#buttons{
+  background-color:#d36bcb;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+
+}
+#buttons:hover{
+  background-color:#e89733;
+}
+.CTA{
+  display:flexbox;
+  flex-flow:column;
+  flex-wrap:nowrap;
+  margin-top:40px;
+  -ms-flex-align:start;
+  justify-content:space-around;
+
+
+}
+/*end of buttons*/
+
+/*toolkit icons*/
+#toolkit{
+  margin-left:-10px;
+  display:flex;
+  justify-content:flex-start; 
+  transition: color 0.2s ease;  
+}
+#toolkits:hover{
+  color:#d36bcb;
+}
+  /*end of toolkit*/
+
+#socials :hover{
+  color:#d36bcb;
+  cursor: auto;;
+
+}
+#project{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  margin:50px 0px;
+}
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 25%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transform:scale(2);
+  animation:pulse 3s infinite;
+  font-size:30px;
+
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #d36bcb;
+}
+
+.facebook {
+  background: #000;
+  color: white;
+}
+
+.twitter {
+  background: #5a60ea;
+  color: white;
+}
+
+.google {
+  background: #000;
+  color: white;
+}
+
+.linkedin {
+  background: #5b65ea;
+  color: white;
+}
+
+.youtube {
+  background:var(--themeic-color);
+  color: white;
+}
+
+@keyframes pulse{
+  0% {
+    transform:scale(0.95);
+  }
+  50%{
+    transform:scale(1);
+    background-color:#ff6dcd;
+    border-radius:100px;
+
+  }
+  100%{
+    transform:scale(0.95);
+  }
+  
+
+}

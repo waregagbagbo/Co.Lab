@@ -126,6 +126,9 @@ STATIC_URL = '/static/'  # path to local dev static  storage
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # development image directory
 
 
+# STATIC_FILES PRODUCTION RENDER
+STATIC_ROOT = os.path.join(BASE_DIR,'productionfiles')
+
 
 
 # Default primary key field type
