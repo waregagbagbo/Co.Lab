@@ -15,8 +15,10 @@ multidict==6.0.4
 newsapi-python==0.2.7
 Pillow==9.5.0
 podcast-api==1.1.5
+psycopg2-binary==2.9.6
 requests==2.29.0
 simplejson==3.19.1
 sqlparse==0.4.4
 urllib3==1.26.15
+whitenoise==6.4.0
 yarl==1.9.2
