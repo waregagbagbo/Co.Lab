@@ -81,8 +81,13 @@ WSGI_APPLICATION = 'portfolio_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'Chelsea123',
+        'HOST':'portfolio.cfwhk4fbnik4.eu-north-1.rds.amazonaws.com',
+        'PORT':5432
     }
 }
 
@@ -135,6 +140,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'productionfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
