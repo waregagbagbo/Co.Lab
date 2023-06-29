@@ -23,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=o0&ub4f59rin_6j(&_ejp*@o%xy4%9$r#93=!gi)9r_83se50'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['portfolio.eu-north-1.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['portfolio.eu-north-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -82,13 +81,13 @@ WSGI_APPLICATION = 'portfolio_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        #'NAME': 'postgres',
-        #'USER': 'postgres',
-        #'PASSWORD': 'Chelsea123',
-        #'HOST':'portfolio.cfwhk4fbnik4.eu-north-1.rds.amazonaws.com',
-        #'PORT':5432
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'Chelsea123',
+        'HOST':'portfolio.cfwhk4fbnik4.eu-north-1.rds.amazonaws.com',
+        'PORT':5432
     }
 }
 
