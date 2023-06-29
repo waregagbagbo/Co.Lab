@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=o0&ub4f59rin_6j(&_ejp*@o%xy4%9$r#93=!gi)9r_83se50'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['portfolio.eu-north-1.elasticbeanstalk.com']
 ALLOWED_HOSTS = ['.vercel.app']
