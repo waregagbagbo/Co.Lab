@@ -132,7 +132,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # development image direct
 
 
 # STATIC_FILES PRODUCTION RENDER
-STATIC_ROOT = os.path.join(BASE_DIR,'production')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'production')
 
 
 
