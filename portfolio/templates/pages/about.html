@@ -1,7 +1,10 @@
 {% load static %}
 <section  class="m-5 p-4" id ="about-us">
     <div class="container">
-            <div class="row">
+            <div class="row">                
+                <div class="col-md-5">
+                    <img src="{% static 'images/about.jpg' %}" alt="dev"id="about-ima" class="rounded mx-auto d-block m-auto" id="about-image" style="height:230px;width:200px;">
+                </div>
                 <div class="col-md-7">
                     <h2 class="text-capitalize fs-1 fw-light "><span id='deco'>About Me.&#129299<span></h2>
                     <p class="text-dark fs-5 fw-light lh-3">
@@ -10,11 +13,7 @@
                         <br/>                     
                         Other than playing with code, I enjoy hiking and going<br/>for cross-country besides hitting the gym once in a while.<br/>
                         I've also been trying to read more so feel free to reach out to me with any book recommendations!  
-                    </p>  
-                    
-                </div>
-                <div class="col-md-5">
-                    <img src="{% static 'images/hero.svg' %}" alt="man"id="about-ima" class="rounded mx-auto d-block m-auto" id="about-image" style="height:230px;width:200px;">
+                    </p>                     
                 </div>
             </div>    
     </div>
