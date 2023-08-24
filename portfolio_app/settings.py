@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=o0&ub4f59rin_6j(&_ejp*@o%xy4%9$r#93=!gi)9r_83se50
 DEBUG = False
 
 #ALLOWED_HOSTS = ['portfolio.eu-north-1.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost','*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'portfolio_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD':'b7issNgNfgd3OvqNMjEB',
-        'HOST':'containers-us-west-154.railway.app',
-        'PORT':6783
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabse',
+        'USER': '',
+        'PASSWORD':'',
+        'HOST':'',
+        'PORT':''
     }
 }
 
