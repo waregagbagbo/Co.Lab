@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+import environ
+
+# initialize the variables for the environ
+env = environ.Env()
+env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=o0&ub4f59rin_6j(&_ejp*@o%xy4%9$r#93=!gi)9r_83se50'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -83,11 +89,11 @@ WSGI_APPLICATION = 'portfolio_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabse',
-        'USER': '',
-        'PASSWORD':'',
-        'HOST':'',
-        'PORT':''
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD':env('DATABASE_PASSWORD'),
+        'HOST':env(),
+        'PORT':env()
     }
 }
 
@@ -148,9 +154,9 @@ CRISPY_TEMPLATE_PACK  = 'bootstrap5' # add the crispy forms template
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-EMAIL_HOST = 'smtp.google.com'
-EMAIL_HOST_USER = "denzrich10@gmail.com"
-EMAIL_HOST_PASSWORD = 'iexmfmmykxmcdhcz'
-EMAIL_PORT =587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "Gabel<noreply@gabe>"
+EMAIL_HOST = env('EMAIL_HOST'),
+EMAIL_HOST_USER = env('EMAIL_HOST_USER'),
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD'),
+EMAIL_PORT =env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS'),
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
